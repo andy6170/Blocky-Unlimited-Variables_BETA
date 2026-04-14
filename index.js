@@ -505,7 +505,10 @@ try {
         textCol.style.flexDirection = "column";
 
         const usedCount = countVariableUsage(ws, v);
-        textCol.innerHTML = `<div style="font-weight:600">${idx}:    ${v.name}</div><div class="ev-muted">In use: (${usedCount})</div>`;
+        textCol.innerHTML = `
+        <div style="font-weight:600">
+        <span class="ev-muted">${idx}:</span> ${v.name}</div>
+        <div class="ev-muted">In use: (${usedCount})</div>`;
 
         leftCol.appendChild(dragHandle);
         leftCol.appendChild(textCol);
