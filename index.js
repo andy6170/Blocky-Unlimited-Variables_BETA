@@ -507,7 +507,8 @@ try {
         const usedCount = countVariableUsage(ws, v);
         textCol.innerHTML = `
         <div style="font-weight:600">
-        <span class="ev-muted">${idx}:</span> ${v.name}</div>
+        <span style="display:inline-block;width:24px;color:#888">${idx}</span> ${v.name}
+        </div>
         <div class="ev-muted">In use: (${usedCount})</div>`;
 
         leftCol.appendChild(dragHandle);
